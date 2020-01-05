@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simplify JS Demo| Vanilla JS Functional Form CRUD</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="d-flex justify-content-center">
+    <div class="container">
+      <h1>Vanilla JS Functional Programming with LocalStorage</h1>
+      <h2></h2>
+      <!-- Booking Form -->
+      <form name="bookingForm" id="bookingForm" enctype="multipart/form-data" novalidate>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">#</span>
+          </div>
+          <input 
+            type="number"
+            name="idnum"
+            class="form-control" 
+            id="idnum" 
+            min="0"  
+            readonly>
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text" 
+            name="name"
+            class="form-control" 
+            id="name" 
+            required="required">
+          <div class="invalid-feedback" id="errname">
+            Name field is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="number of guest">Number of Guest</label>
+          <input 
+            type="number" 
+            name="numGuest"
+            class="form-control" 
+            id="numGuest"  
+            required="required" 
+            min="1">
+          <div class="invalid-feedback" id="errnumGuest">
+            Number of Guest field is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="date from">Date From</label>
+          <input 
+            type="date" 
+            name="dateFrom"
+            class="form-control" 
+            id="dateFrom"  
+            required="required">
+          <div class="invalid-feedback" id="errdateFrom">
+            'Date From' field is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="date to">Date To</label>
+          <input 
+            type="date" 
+            name="dateTo"
+            class="form-control" 
+            id="dateTo" 
+            required="required">
+          <div class="invalid-feedback" id="errdateTo">
+            'Date To' field is required
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+      <!-- Booking list -->
+      <section class="table-responsive-sm">
+        <table class="table table-sm table-dark mt-4 pt-2" id="result">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Number of Guest</th>
+              <th>Date From</th>
+              <th>Date To</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </div>
+    <!-- Framework & Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
